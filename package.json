@@ -18,11 +18,13 @@
     "_editorconfig"
   ],
   "dependencies": {
+    "@commitlint/config-conventional": "^19.8.1",
     "@eslint/js": "^9.33.0",
-    "@ianvs/prettier-plugin-sort-imports": "^4.6.1",
     "@next/eslint-plugin-next": "^15.4.6",
+    "@trivago/prettier-plugin-sort-imports": "^5.2.2",
     "@typescript-eslint/eslint-plugin": "^8.39.0",
     "@typescript-eslint/parser": "^8.39.0",
+    "commitlint": "^19.8.1",
     "eslint": "^9.33.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-jsx-a11y": "^6.10.2",
