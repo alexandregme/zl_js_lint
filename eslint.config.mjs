@@ -1,12 +1,12 @@
 import js from "@eslint/js";
+import nextPlugin from "@next/eslint-plugin-next";
 import tsPlugin from "@typescript-eslint/eslint-plugin";
 import tsParser from "@typescript-eslint/parser";
+import prettier from "eslint-config-prettier";
+import a11y from "eslint-plugin-jsx-a11y";
 import react from "eslint-plugin-react";
 import reactHooks from "eslint-plugin-react-hooks";
-import a11y from "eslint-plugin-jsx-a11y";
-import nextPlugin from "@next/eslint-plugin-next";
 import tailwind from "eslint-plugin-tailwindcss";
-import prettier from "eslint-config-prettier";
 
 /** @type {import('eslint').Linter.FlatConfig[]} */
 export default [
