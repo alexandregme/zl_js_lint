@@ -12,6 +12,8 @@
     "release": "semantic-release"
   },
   "files": [
+    "post-install/post-install-scripts-change.mjs",
+    "post-install/post-install.mjs",
     "post-install/index.mjs",
     "_editorconfig",
     "_eslintrc.js"
