@@ -8,14 +8,14 @@
     "prettier": "prettier --write .",
     "stylelint": "stylelint '**/*.{js,jsx,ts,tsx,html,mdx,css,scss}' --allow-empty-input",
     "lint": "pnpm eslint && pnpm prettier && pnpm stylelint",
-    "postinstall": "node ./post-install.mjs",
+    "postinstall": "node post-install/post-install.mjs",
     "release": "semantic-release"
   },
   "files": [
     "eslint.config.mjs",
     "prettier.config.mjs",
     "stylelint.config.mjs",
-    "post-install.mjs",
+    "post-install/post-install.mjs",
     "_editorconfig"
   ],
   "dependencies": {
