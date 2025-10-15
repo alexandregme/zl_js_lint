@@ -1,6 +1,6 @@
 {
-  "name": "@alexandregme/zljs-lint",
-  "version": "1.0.0",
+  "name": "@alexandregme/zl_js-lint",
+  "version": "1.0.1",
   "license": "MIT",
   "type": "module",
   "scripts": {
