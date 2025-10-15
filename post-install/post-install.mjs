@@ -7,8 +7,8 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const filesToCopy = [
-  { source: "../_editorconfig", target: "./.editorconfig", label: ".editorconfig" },
-  { source: "../_eslintrc.js", target: "./.eslintrc.js", label: ".eslintrc.js" },
+  { source: "../_editorconfig", target: ".editorconfig", label: ".editorconfig" },
+  { source: "../_eslintrc.js", target: ".eslintrc.js", label: ".eslintrc.js" },
 ];
 
 filesToCopy.forEach(({ source, target, label }) => {
