@@ -1,3 +1,3 @@
-import config from "@alexandregme/zl_js/eslint.config.mjs";
+import config from "@alexandregme/zljs-lint/eslint.config.mjs";
 
 export default config;
