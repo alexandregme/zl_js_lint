@@ -7,15 +7,13 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const filesToCopy = [
-  { source: "../_editorconfig", target: ".editorconfig", label: ".editorconfig" },
-  { source: "../_eslintrc.js", target: ".eslintrc.js", label: ".eslintrc.js" },
+  { source: path.resolve(__dirname, "../_editorconfig"), target: path.resolve(process.cwd(), ".editorconfig"), label: ".editorconfig" },
+  { source: path.resolve(__dirname, "../_eslintrc.js"), target: path.resolve(process.cwd(), ".eslintrc.js"), label: ".eslintrc.js" }
 ];
 
 filesToCopy.forEach(({ source, target, label }) => {
   try {
-    const src = path.join(__dirname, source);
-    const dst = path.join(process.cwd(), target);
-    fs.copyFileSync(src, dst);
+    fs.copyFileSync(source, target);
     console.log(`✅ ${label} was copied and overwritten successfully.`);
   } catch (err) {
     console.error(`\x1b[1m\x1b[31m❌ Failed to copy ${label}:`, err, '\x1b[0m');
