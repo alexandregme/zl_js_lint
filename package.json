@@ -8,7 +8,7 @@
     "prettier": "prettier --write .",
     "stylelint": "stylelint '**/*.{js,jsx,ts,tsx,html,mdx,css,scss}' --allow-empty-input",
     "lint": "pnpm eslint && pnpm prettier && pnpm stylelint",
-    "postinstall": "node post-install/index.mjs",
+    "postinstall": "node ./post-install/index.mjs",
     "release": "semantic-release"
   },
   "files": [
