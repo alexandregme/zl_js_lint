@@ -1,9 +1,17 @@
 import { readFileSync, writeFileSync } from "node:fs";
-import { resolve } from "node:path";
+import path from "node:path";
 
-// Find the consumer project's root because this script runs from your package's directory
-const projectRoot = resolve(process.cwd(), "./"); // Adjust paths if workspaces are deeper/shallower
-const pkgPath = resolve(projectRoot, "package.json");
+const projectRoot =  process.env.INIT_CWD && process.env.INIT_CWD.trim().length > 0
+  ? path.resolve(process.env.INIT_CWD)
+  : path.resolve(__dirname, "..", "..");
+
+const consumerPkgJsonPath = path.join(projectRoot, "package.json");
+if (!fs.existsSync(consumerPkgJsonPath)) {
+  console.warn(
+    +    "⚠️  Could not locate package.json in consumer project, skipping config copy."
+  );
+  process.exit(0);
+
 
 const scriptsToAdd = {
   "eslint": "eslint ./ --color --fix",
